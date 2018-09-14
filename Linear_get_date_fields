@@ -1,0 +1,6 @@
+transactions['date'] = pd.to_datetime(transactions['date'], format='%d.%m.%Y')
+# Extract week, month and year from date column
+transactions['month'] = transactions.date.dt.month
+transactions['year'] = transactions.date.dt.year
+transactions['week'] = transactions.date.dt.week
+transactions.head()
